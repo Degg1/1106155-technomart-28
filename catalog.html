@@ -62,25 +62,61 @@
         <div>
             <ul>
                 <li>
-                    <a href=#>КАТАЛОГ</a>
+                    <a href=#>Каталог</a>
                 </li>
                 <li>
-                    <a href=#>ИНСТРУМЕНТ</a>
+                    <a href=#>Инструмент</a>
                 </li>
                 <li>
-                    <a href=#>ПЕРФОРАТОРЫ</a>
+                    <a href=#>Перфораторы</a>
                 </li>
             </ul>
         </div>
-        <h2>ПЕРФОРАТОРЫ</h2>
-        <aside>
-            <h3>Фильтры</h3> 
-            
-             
-              
-               
-                
-                  </aside>
+        <h2>Пурфораторы</h2>
+       <aside>
+           <h2>Фильтр:</h2> <!-- Посмотреть с заголовками-->
+            <form action="https://echo.htmlacademy.ru/courses" method="post">
+              <h3 class="visually-hidden">Диапазон цены</h3>
+                <div class="">
+          <label for="dayscount">Цена:</label>
+           0<input type="range" id="price range" name="price count" min="100" max="30000" step="100"> 30000
+        </div>
+                <h3>Производители:</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="bosch" id="bosch" checked>
+                        <label for="bosch">Bosch</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="interskol" id="interskol">
+                        <label for="interskol">Интерскол</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="makita" id="makita" checked>
+                        <label for="makita">Makita</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="dewalt" id="dewalt">
+                        <label for="dewalt">Dewalt</label> </li>
+                    <li>
+                        <input type="checkbox" name="hitachi" id="hitachi">
+                        <label for="hitachi">Hitachi</label>
+                    </li>
+                </ul>
+                <h3>Питание:</h3>
+                <ul>
+                    <li>
+                        <input type="radio" name="battery" id="battery" checked>
+                        <label for="battery">Аккумуляторные</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="power" id="network">
+                        <label for="network">Сетевые</label>
+                    </li>
+                </ul>
+                <input type="submit" value="Показать">
+            </form>
+        </aside>
         <div>Сортировка:
         по цене
         по типу
@@ -190,44 +226,7 @@
             </li>
         </ul>
         
-        <aside>
-            <form action="">
-                <h3>ПРОИЗВОДИТЕЛИ:</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" name="bosch" id="bosch" checked>
-                        <label for="bosch">Bosch</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="interskol" id="interskol">
-                        <label for="interskol">Интерскол</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="makita" id="makita" checked>
-                        <label for="makita">Makita</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="dewalt" id="dewalt">
-                        <label for="dewalt">Dewalt</label> </li>
-                    <li>
-                        <input type="checkbox" name="hitachi" id="hitachi">
-                        <label for="hitachi">Hitachi</label>
-                    </li>
-                </ul>
-                <h3>Питание:</h3>
-                <ul>
-                    <li>
-                        <input type="radio" name="power" id="battery" checked>
-                        <label for="battery">Аккумуляторные</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="power" id="network">
-                        <label for="network">Сетевые</label>
-                    </li>
-                </ul>
-                <input type="submit" value="Показать">
-            </form>
-        </aside>
+        
         <div>
             <h2>
                 Пара слов о перфораторах
