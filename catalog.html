@@ -3,37 +3,40 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="***.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>HTML Academy: Техномарт</title>
 
 </head>
 
 
 <body>
-    <header>
-        <a href=""><img src="./img/content/logo.svg" alt="Логотип"></a>
-        <form>
-            <img src="./img/svg/icon-search.svg" alt="">
-            <label> <img src="./img/svg/icon-search.svg" alt="">Поиск</label>
-            <input type="text">
-        </form>
-
-        <a>Закладки: <span>0</span></a>
-        <a href=#>Корзина: <span>0</span>
-        </a>
-        <button type="button">Оформить заказ</button>
-        <h1>Интернет-магазин строительных материалов и интструментов для ремонта</h1>
-        <img src="./img/svg/icon-phone.svg" alt="телефон">
-        <a href=”tel:+78125550555″>+7 (812) 555-05-55</a>
-        <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+    <header style="background-color:aquamarine">
         <div>
+            <a href=""><img src="./img/content/logo.svg" alt="Логотип"></a>
+            <form aria-label="Форма обратной связи">
+                <img src="./img/svg/icon-search.svg" alt="">
+                <label for="search"> Поиск </label>
+                <input type="text" id="search">
+            </form>
+            <img src="./img/svg/icon-bookmark.svg" alt="">
+            <a href="#">Закладки: <span>0</span></a>
+            <img src="./img/svg/icon-cart.svg" alt="">
+            <a href=#>Корзина: <span>0</span></a>
+            <button type="button">Оформить заказ</button>
+        </div>
+        <div>
+            <h1>Интернет-магазин строительных материалов и интструментов для ремонта</h1>
+
+            <a href="tel:+78125550555"><img src="./img/svg/icon-phone.svg" alt="телефон">+7 (812) 555-05-55</a>
+            <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
             <div>
                <img src="./img/svg/icon-user.svg" alt="">
                 <p>
                     Равшан Джамшутович
                 </p><img src="./img/svg/icon-logout.svg" alt="">
                 <button>Выход</button>
-            </div>
+           
             <ul>
                 <li>
                     <a href=""> Мои заказы</a>
@@ -42,7 +45,7 @@
                     <a href=""> Личный кабинет</a>
                 </li>
             </ul>
-        </div>
+         </div>
         <nav>
             <ul>
                 <li><a href=#>Главная</a></li>
@@ -117,14 +120,13 @@
                 <input type="submit" value="Показать">
             </form>
         </aside>
-        <div>Сортировка:
-        по цене
-        по типу
-        по функционалу
-        </div>
-        
-        
-        
+        <div><h2>Сортировка:</h2>
+       <ul>
+           <li>по цене</li>
+          <li> по типу</li>
+          <li>по функционалу</li>
+       
+            </ul>div>
         <ul>
             <li>
                 <!--Карточка 1-->
