@@ -17,12 +17,19 @@
         <div class="up-header">
             <div class="up-header-container">
                 <a href="#"><img src="./img/content/logo.svg" alt="Логотип"></a>
-                <form class="search-form" aria-label="Форма обратной связи">
-                    <label for="search"> 
-                    <span class="up-header-search">Поиск</span> 
-                    </label>
-                    <input type="text" id="search">
-                </form>
+                <div class="search-form-container">
+                    <form action="https://echo.htmlacademy.ru " method="get" class="search-form" aria-label="Форма обратной связи">
+
+                        <input class="search-form-input" type="search" name="search" id="search">
+                        <label class="search-form-label" for="search">
+                            Поиск
+                        </label>
+                        <svg class="search-form-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                            <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" /></svg>
+
+
+                    </form>
+                </div>
 
                 <a class="up-header-link up-header-link-bookmarks" href="#">Закладки: <span>0</span></a>
 
@@ -81,36 +88,31 @@
 
         </nav>
     </header>
-    <main style="background-color:aquamarine">
-        <!-- не забыть убрать стиь-->
+    <main>
         <section class="benefits">
             <h2 class="visually-hidden">Наши услуги</h2>
             <ul class="benefits-list">
-                <li class="benefits-list-item">
-                    <h3>Материалы</h3>
-                    <img src="./img/svg/icon-1.svg" alt="Картинка Bosch">
-                    <a href="#">На любой вкус</a>
+                <li class="benefits-list-item benefits-list-item-material">
+                    <h3 class="benefits-list-header">Материалы</h3>
+                    <a class="benefits-list-link" href="#">На любой вкус</a>
                 </li>
-                <li class="benefits-list-item">
-                    <h3>Инструмент</h3>
-                    <img src="./img/svg/icon-2.svg" alt="Картинка Bosch">
-                    <a href="#">На все случаи</a>
+                <li class="benefits-list-item benefits-list-item-tool">
+                    <h3 class="benefits-list-header">Инструмент</h3>
+
+                    <a class="benefits-list-link" href="#">На все случаи</a>
 
                 </li>
-                <li class="benefits-list-item">
-                    <h3>Техника</h3>
-                    <img src="./img/svg/icon-3.svg" alt="">
-                    <a href="#">Для стройки</a>
+                <li class="benefits-list-item benefits-list-item-technic">
+                    <h3 class="benefits-list-header">Техника</h3>
+                    <a class="benefits-list-link" href="#">Для стройки</a>
                 </li>
-                <li class="benefits-list-item">
-                    <h3>Скидки 50%</h3>
-                    <img src="./img/svg/icon-4.svg" alt="">
-                    <a href="#">На 350 товаров </a>
+                <li class="benefits-list-item benefits-list-item-discount">
+                    <h3 class="benefits-list-header">Скидки 50%</h3>
+                    <a class="benefits-list-link" href="#">На 350 товаров </a>
                 </li>
-                <li class="benefits-list-item">
-                    <h3>Доставка</h3>
-                    <img src="./img/svg/icon-5.svg" alt="">
-                    <a href="#">Бесплатно</a>
+                <li class="benefits-list-item benefits-list-item-delivery">
+                    <h3 class="benefits-list-header">Доставка</h3>
+                    <a class="benefits-list-link" href="#">Бесплатно</a>
                 </li>
             </ul>
             <div class="gallery">
@@ -196,9 +198,9 @@
             </ul>
         </section>
         <section>
-            <div class="popular-manufacturers" >
+            <div class="popular-manufacturers">
                 <h2>Популярные производители:</h2>
-                <a href="#">Все популярные призводители</a>
+                <a href="#">Популярные призводители</a>
             </div>
             <ul class="popular-manufacturers-list">
                 <li class="popular-manufacturers-item">
@@ -254,7 +256,7 @@
 
         <section class="services">
             <h2>Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценами!  </p>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами! </p>
             <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             <div class="services-container">
                 <ul class="services-list">
@@ -263,19 +265,19 @@
                     <li class="service-list-item"><a href="">Кредит</a></li>
                 </ul>
                 <ul class="service-variant-list">
-                    <li class="service-variant-item" >
+                    <li class="service-variant-item">
                         <h2>Доставка</h2>
                         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершеlнно бесплатно!
                             Ведь мы неплохо заработаем,
                             поднимая его на ваш этаж!
                         </p>
                     </li>
-                    <li class="service-variant-item" >
+                    <li class="service-variant-item">
                         <h2>Гарантии</h2>
                         <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
                         </p>
                     </li>
-                    <li class="service-variant-item" >
+                    <li class="service-variant-item">
                         <h2>Кредит</h2>
                         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
                             Ведь мы неплохо заработаем,
@@ -289,44 +291,54 @@
         </section>
 
         <section class="delivery-partners-map">
-            
-            <div class="delivery-partners">
-            <h2>КОМПАНИЯ ТЕХНОМАРТ</h2>
-            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастробайтерах. </p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки Росии!
-                Техномарт работает со многими транспортными компаниями:</p>
-            <ul class="delivery-partners-list">
-                <li class="delivery-partner-item">Деловые линии</li>
-                <li class="delivery-partner-item">Автотрейдинг</li>
-                <li class="delivery-partner-item">ЖелДорЭкспедиция</li>
-            </ul>
-            <a href="#">Подробнее о компанииИ</a>
-            </div>
-        </section>
-        <section class="contats-map">
-            <h2>Контакты</h2>
-            <p>Вы можете забрать товар сами,
-                заехав в наш офис:</p>
-            <div class="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?   um=constructor%3Afcf4bf2a52f4c4867527ba5671c3ba415595f49b5ac2389a6c0fc6848580c9af&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-            <a href="#"> Заблудились? Напишите нам!
-            </a>
 
+            <div class="delivery-partners">
+                <h2>КОМПАНИЯ ТЕХНОМАРТ</h2>
+                <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастробайтерах. </p>
+                <p>Мы можем доставить ваш товар в самые отдаленные точки Росии!
+                    Техномарт работает со многими транспортными компаниями:</p>
+                <ul class="delivery-partners-list">
+                    <li class="delivery-partner-item">Деловые линии</li>
+                    <li class="delivery-partner-item">Автотрейдинг</li>
+                    <li class="delivery-partner-item">ЖелДорЭкспедиция</li>
+                </ul>
+                <a href="#">Подробнее о компании</a>
+            </div>
+
+            <div class="contats-map">
+                <h2>Контакты</h2>
+                <p>Вы можете забрать товар сами,
+                    заехав в наш офис:</p>
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?   um=constructor%3Afcf4bf2a52f4c4867527ba5671c3ba415595f49b5ac2389a6c0fc6848580c9af&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <a href="#"> Заблудились? Напишите нам!
+                </a>
+            </div>
         </section>
     </main>
-    <footer class="footer" style="background-color:wheat">
-        <div>
+    <footer class="footer">
+        <div class="up-footer">
             <a href=""><img src="./img/content/logo_foter.svg" alt="Логотип"></a>
             <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Компания</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Контакты</a></li>
+            <nav class=".up-footer-nav">
+                <h2 class="visually-hidden"> Навигация по сайту нижняя</h2>
+                <ul class="up-footer-list">
+                    <li class="up-footer-list-item">
+                    <a class="up-footer-list-link" href="#">Компания</a>
+                    </li>
+                    <li class="up-footer-list-item">
+                    <a class="up-footer-list-link" href="#">Новости</a>
+                    </li>
+                    <li class="up-footer-list-item">
+                    <a class="up-footer-list-link" href="catalog.html">Каталог</a></li>
+                    <li class="up-footer-list-item">
+                    <a class="up-footer-list-link" href="#">Доставка</a>
+                    </li>
+                    <li class="up-footer-list-item">
+                        <a class="up-footer-list-link" href="#">Контакты</a>
+                        </li>
                 </ul>
             </nav>
             <nav>
@@ -338,7 +350,7 @@
                 </ul>
             </nav>
         </div>
-        <div>
+        <div class="down-footer">
             <div>
                 <p>©2010-2017 Компания «Техномарт»</p>
                 <p>Все права защищены</p>
