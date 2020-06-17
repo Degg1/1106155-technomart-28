@@ -17,6 +17,8 @@
     --special-lilac: #DC91D8;
     --special-greenlight: #8ED78F;
     --basic-grey: #3D546F;
+    --basic-error:#BA2732;
+    --basic-main:#F3F7F9;
 }
 
 /*
@@ -81,8 +83,8 @@ a {
 /*--шапка сайта header*/
 
 .header {
-    background: rgba(0, 0, 0, 0.1);
-    padding-bottom: 120px;
+    background: var(--basic-main);
+    padding-bottom: 50px;
 }
 
 .up-header {
@@ -97,35 +99,41 @@ a {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     margin-bottom: 5px;
 }
 
 .up-logo {
-    margin-top: 4px;
+    margin: 7px 0px 0px 55px;
     padding: 0;
     position: absolute;
-
+    top: 3px;
 }
 
-.up-logo-plug {
-    width: 206px;
+
+.up-logo-plug { 
+    margin: 0 0 0 0;
+    padding: 0;
+    display: block;
+    width: 220px;
     height: 40px;
+    background: var(--basic-red);
+    box-shadow: 0 6px 0 var(--basic-error);
 }
-
 .search-form-container {
 
-    width: 219px;
-    height: 100%;
-    margin: 0 30px 0 0;
+    width: 272px;
+    height: 40px;
+    margin: 0 20px 0 0;
+    display: block;
 }
 
 .search-form {
     position: relative;
     display: block;
     height: 100%;
+    width: 100%;
 }
 
 .search-form-input {
@@ -133,17 +141,17 @@ a {
     z-index: 1;
     display: block;
     padding: 0 0 0 40px;
-    height: 40px;
+    height: 100%;
+    width: 100%;
     background: transparent;
     border: none;
-
 }
 
 .search-form-icon {
     position: absolute;
     width: 17px;
     height: 17px;
-    left: 5px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
@@ -193,8 +201,8 @@ a {
 
 .search-form-label {
     position: absolute;
-    left: 30px;
-    top: 10px;
+    left: 43px;
+    top: 8px;
     font-size: 18px;
 }
 
@@ -204,17 +212,21 @@ a {
 }
 
 .up-header-link {
+    margin: 0;
+    display: block;
     position: relative;
     color: #ffffff;
     font-size: 18px;
-    margin-left: 5px;
-    padding-left: 20px;
+    padding: 9px 0 9px 20px;
 }
 
 .up-header-link-bookmarks {
-    margin-right: 20px;
+    margin-right: 55px;
 }
 
+.up-header-link-cart {
+    margin-right: 26px;
+}
 .up-header-link:hover {
     opacity: 1;
 }
@@ -223,8 +235,8 @@ a {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    left: -3px;
+    top: 11px;
+    left: -2px;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -243,6 +255,9 @@ a {
     height: 16px;
 
 }
+.up-header-link-bookmarks:active {
+    background: #161D29;
+}
 
 .up-header-link-cart::before {
     background-image: url("../img/svg/icon-cart.svg");
@@ -253,14 +268,19 @@ a {
 .create-order {
     height: 42px;
     width: 150px;
-    font-size: 14px;
-    background: #63A63E;
-    color: #ffffff;
-    padding: 7px 10px;
+    font-size: 18px;
+    background: var(--basic-green);
+    color: var(--wight);
     cursor: pointer;
     border: none;
+    position: relative;
+    
 }
-
+.create-order-text {
+    position: absolute;
+    top: 11px;
+    left: 20px;
+}
 .create-order:hover {
     background: #5FBB2D;
 }
@@ -272,7 +292,7 @@ a {
     align-items: center;
     max-width: 940px;
     padding-top: 42px;
-    padding-bottom: 44px;
+    padding-bottom: 40px;
     align-items: flex-start;
 }
 
@@ -281,47 +301,43 @@ a {
     margin: 0;
     padding: 0;
     width: 228px;
-    color: #EE3643;
+    color:var(--basic-red);
     font-size: 16px;
     font-style: italic;
     padding-left: 30px;
     line-height: 24px;
     margin-top: -4px;
 }
-
+.contacts {
+    width: 270px;
+    margin: 0 0 0 24px;
+}
 .login-block {
+    position: relative;
     margin: 0;
     padding: 0;
-    width: 325px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-
-}
+    width: 280px;
+   }
 
 .login-item {
     list-style-type: none;
-    margin-left: 10px;
-}
+   }
 
 .login-link {
+    position: absolute;
     display: block;
     background: #ffffff;
-    padding: 10px 20px;
-
+    font-size: 21px;
     color: #000000;
-
-}
+   }
 
 .login-entry-icon {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 44%;
+    left: 3px;
     transform: translateY(-50%);
-
-
 }
 
 .login-entry-icon svg {
@@ -334,41 +350,42 @@ a {
 }
 
 .login-link:hover {
-    color: #EE3643;
+    color: var(--basic-red);
 }
 
-.login-entry {
-
-    position: relative;
-    color: #000000;
-    margin-left: 10px;
-}
+.login-entry { 
+    padding: 9px 27px 11px 16px;
+    position: absolute;
+    left: 0;
+    }
 
 .login-text {
     position: relative;
     padding-left: 30px;
+   
+}
+.login-registration {
+       top: 0px;
+       right: 0px;
+       padding: 9px 23px 11px 24px;
 }
 
-.contacts {
-    width: 270px;
-    margin: 0 0 0 69px;
-
-}
 
 .phone-link {
     display: block;
-    border: 1px solid #ffffff;
+    border: 3px solid #ffffff;
     text-align: center;
     padding-top: 8px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 }
 
 .phone {
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 27px;
     position: relative;
-    color: #EE3643;
-    font-size: 20px;
+    color: var(--basic-red);
+    font-size: 21px;
+    font-weight: bold;
 
 
 }
@@ -378,8 +395,8 @@ a {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: -8px;
     background: url(../img/svg/icon-phone.svg) no-repeat center center;
     background-size: cover;
 }
@@ -388,7 +405,7 @@ a {
     font-style: normal;
     font-size: 14px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1px;
 }
 
 .down-header {
@@ -404,7 +421,7 @@ a {
     justify-content: space-around;
     align-items: center;
     position: relative;
-    font-size: 14px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     color: #ffffff;
