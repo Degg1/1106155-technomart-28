@@ -454,6 +454,7 @@ a {
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 123px 123px 123px;
     margin-bottom: 55px;
+    margin-top: 61px;
 }
 
 .benefits-list-item {
