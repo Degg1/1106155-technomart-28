@@ -16,8 +16,13 @@
     <header class="header">
         <div class="up-header">
             <div class="up-header-container wrapper">
-                <span class="up-logo-plug"></span>
-                <a class="up-logo" href="#"><img src="./img/svg/logo-technomart.svg" alt="Логотип"></a>
+
+                <a class="up-logo" href="#">
+                    <span class="up-logo-img">
+                        <img src="./img/svg/logo-technomart.svg" alt="Логотип">
+                    </span>
+
+                </a>
                 <div class="search-form-container">
                     <form action="https://echo.htmlacademy.ru " method="get" class="search-form" aria-label="Форма обратной связи">
 
@@ -49,12 +54,12 @@
             <ul class="login-block">
                 <li class="login-item">
                     <a class="login-entry login-link" href="#"><span class="login-text">
-                        <em class="login-entry-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                        <path d="M14.875 8.5L6 0v6H0v5h6v6z" />
-                        <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
-                        </svg>
-                        </em>Войти</span>
+                            <em class="login-entry-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M14.875 8.5L6 0v6H0v5h6v6z" />
+                                    <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
+                                </svg>
+                            </em>Войти</span>
                     </a>
                 </li>
                 <li class="login-item">
@@ -68,7 +73,7 @@
             <h2 class="visually-hidden"> Навигация по сайту</h2>
             <ul class="down-header-list">
                 <li class="down-header-item">
-                    <a class="down-header-link" href="#">Главная</a>
+                    <a class="down-header-link" href="index.html">Главная</a>
                 </li>
                 <li class="down-header-item">
                     <a class="down-header-link" href="#">Компания</a>
@@ -97,58 +102,58 @@
         <section class="benefits wrapper">
             <h2 class="visually-hidden">Наши услуги</h2>
             <ul class="benefits-list">
-                <li class="benefits-list-item benefits-list-item-material">
+                <li class="benefits-list-item benefits-list-item-material new">
                     <h3 class="benefits-list-header">Материалы</h3>
-                    <a class="benefits-list-link" href="#">На любой вкус</a>
+                    <a class="benefits-list-link benefits-list-link-material" href="#">На любой вкус</a>
                 </li>
                 <li class="benefits-list-item benefits-list-item-tool">
                     <h3 class="benefits-list-header">Инструмент</h3>
 
-                    <a class="benefits-list-link" href="#">На все случаи</a>
+                    <a class="benefits-list-link benefits-list-link-tool" href="#">На все случаи</a>
 
                 </li>
                 <li class="benefits-list-item benefits-list-item-technic">
                     <h3 class="benefits-list-header">Техника</h3>
-                    <a class="benefits-list-link" href="#">Для стройки</a>
+                    <a class="benefits-list-link benefits-list-link-technic" href="#">Для стройки</a>
                 </li>
 
                 <li class="benefits-list-item-slider">
                     <div class="gallery">
                         <!-- cлайдер-->
-                        
-                    <input type="radio" name="switch" id="switch-first" class="switch-first visually-hidden" checked>
-                       <input type="radio" name="switch" id="switch-second" class="switch-second visually-hidden">
+
+                        <input type="radio" name="switch" id="switch-first" class="switch-first visually-hidden" checked>
+                        <input type="radio" name="switch" id="switch-second" class="switch-second visually-hidden">
                         <ul class="gallery-list">
                             <li class="gallery-item gallery-item-drills ">
                                 <h3 class="gallery-header">Дрели</h3>
                                 <p class="gallery-text">Соседям на радость</p>
                                 <!-- банер-->
-                                <a class="gallery-catalog-link"  href="./catalog.html">Открыть каталог</a>
+                                <a class="gallery-catalog-link" href="./catalog.html">Открыть каталог</a>
                             </li>
                             <li class="gallery-item gallery-item-hammers">
                                 <h3 class="gallery-header">Перфораторы</h3>
                                 <p class="gallery-text">Настоящие мужские игрушки</p>
                                 <!-- банер-->
-                                <a class="gallery-catalog-link"  href="./catalog.html">Открыть каталог</a>
+                                <a class="gallery-catalog-link" href="./catalog.html">Открыть каталог</a>
                             </li>
 
                         </ul>
-                       <!--Стрелки-->
-                        
-                         <div class="ticks-button">
-                          <label class="tick tick-left" for="switch-first"><img src="./img/svg/icon-left.svg" alt=""><span class="visually-hidden ">влево</span></label>
+                        <!--Стрелки-->
+
+
+                        <label class="tick tick-left" for="switch-first"><img src="./img/svg/icon-left.svg" alt=""><span class="visually-hidden ">влево</span></label>
                         <label class="tick tick-right" for="switch-second"><img src="./img/svg/icon-right.svg" alt=""><span class="visually-hidden ">вправо</span></label>
-                        </div>
+
                         <!--Круглые кнопки -->
-                           <ul class="round-button">
+                        <ul class="round-button">
                             <li>
                                 <label class="round-button-label round-button-label-first" for="switch-first">
-                                <span class="visually-hidden ">первая страница</span>
+                                    <span class="visually-hidden ">первая страница</span>
                                 </label>
                             </li>
                             <li>
                                 <label class="round-button-label round-button-label-second" for="switch-second">
-                                <span class="visually-hidden ">вторая страница</span>
+                                    <span class="visually-hidden ">вторая страница</span>
                                 </label>
                             </li>
                         </ul>
@@ -158,11 +163,11 @@
 
                 <li class="benefits-list-item benefits-list-item-discount">
                     <h3 class="benefits-list-header">Скидки 50%</h3>
-                    <a class="benefits-list-link" href="#">На 350 товаров </a>
+                    <a class="benefits-list-link benefits-list-link-discount" href="#">На 350 товаров </a>
                 </li>
                 <li class="benefits-list-item benefits-list-item-delivery">
                     <h3 class="benefits-list-header">Доставка</h3>
-                    <a class="benefits-list-link" href="#">Бесплатно</a>
+                    <a class="benefits-list-link benefits-list-link-delivery" href="#">Бесплатно</a>
                 </li>
             </ul>
 
@@ -170,55 +175,100 @@
         </section>
 
 
-        <section>
-            <div class="popular-goods wrapper">
+        <section class="popular-goods-section wrapper">
+            <div class="popular-goods">
                 <h2 class="popular-goods-heading">Популярные товары:</h2>
                 <a href="#">Все популярные товары</a>
             </div>
-            <ul class="popular-goods-list wrapper">
+            <ul class="popular-goods-list">
                 <!--Карточка 1-->
                 <li class="popular-goods-item">
-                    <img src="img/content/goods1_9000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 9000">
-                    <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 9000</a>
-                    <p><del>32500 P.</del></p>
-                    <p class="popular-goods-butoon-price"> 25500 P.</p>
-                    <div>
-                        <button type="button">Купить</button>
-                        <button type="button">В закладки</button>
+                    <div class="popular-goods-img-block">
+                        <div class="popular-goods-img-container">
+                            <img class="popular-goods-img" src="img/content/goods1_9000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 9000">
+                        </div>
+                        <div class="popular-goods-buttons-container">
+                            <button class="popular-goods-button popular-goods-button-buy" type="button">Купить</button>
+                            <button class="popular-goods-button popular-goods-button-bookmarks" type="button">В закладки</button>
+                        </div>
+                    </div>
+                    <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 9000 Перфоратор BOSCH BFG 9000 </a>
+                    <div class="popular-goods-price-container">
+                        <p class="popular-goods-butoon-price-old">
+                            <span class="visually-hidden">Старая цена</span>
+                            32500 P.
+                        </p>
+                        <p class="popular-goods-butoon-price">
+                            <span class="visually-hidden">Новая цена</span>
+                            25500 P.</p>
                     </div>
                 </li>
-                <li class="popular-goods-item">
-                    <!--Карточка 2-->
-                    <img src="img/content/goods2_3000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 3000">
-                    <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 3000</a>
-                    <p><del>22500 P.</del></p>
-                    <p class="popular-goods-butoon-price"> 15500 P.</p>
-                    <div>
-                        <button type="button">Купить</button>
-                        <button type="button">В закладки</button>
+                <!--Карточка 2-->
+                <li class="popular-goods-item new">
+                    <div class="popular-goods-img-block">
+                        <div class="popular-goods-img-container">
+                            <img src="img/content/goods2_3000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 3000">
+                        </div>
+                        <div class="popular-goods-buttons-container">
+                            <button class="popular-goods-button popular-goods-button-buy" type="button">Купить</button>
+                            <button class="popular-goods-button popular-goods-button-bookmarks" type="button">В закладки</button>
+                        </div>
+                    </div>
+                    <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 3</a>
+                    <div class="popular-goods-price-container">
+                        <p class="popular-goods-butoon-price-old">
+                            <span class="visually-hidden">Старая цена</span>
+                            22500 P.
+                        </p>
+                        <p class="popular-goods-butoon-price">
+                            <span class="visually-hidden">Новая цена</span>
+                            15500 P.
+                        </p>
                     </div>
                 </li>
+                 <!--Карточка 3-->
                 <li class="popular-goods-item">
-                    <!--Карточка 3-->
-                    <img src="./img/content/goods3_6000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 6000">
+                    <div class="popular-goods-img-block">
+                        <div class="popular-goods-img-container">
+                           <img src="./img/content/goods3_6000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 6000">
+                        </div>
+                        <div class="popular-goods-buttons-container">
+                            <button class="popular-goods-button popular-goods-button-buy" type="button">Купить</button>
+                            <button class="popular-goods-button popular-goods-button-bookmarks" type="button">В закладки</button>
+                        </div>
+                    </div>
+
                     <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 6000</a>
-                    <p><del>30500 P.</del></p>
-                    <p class="popular-goods-butoon-price"> 25500 P.</p>
-                    <div>
-                        <button type="button">Купить</button>
-                        <button type="button">В закладки</button>
+                    <div class="popular-goods-price-container">
+                        <p class="popular-goods-butoon-price-old">
+                            <span class="visually-hidden">Старая цена</span>
+                           30500 P.
+                        </p>
+                        <p class="popular-goods-butoon-price">
+                            <span class="visually-hidden">Новая цена</span>
+                            25500 P.</p>
                     </div>
                 </li>
-                <li class="popular-goods-item">
-                    <!--Карточка 4-->
-                    <img src="img/content/goods4_2000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 2000">
+                <!--Карточка 4-->
+                <li class="popular-goods-item new">
+                    <div class="popular-goods-img-block">
+                        <div class="popular-goods-img-container">
+                           <img src="img/content/goods4_2000.jpg" width="" height="" alt="Фото перфоратора Bosch модели 2000">
+                        </div>
+                        <div class="popular-goods-buttons-container">
+                            <button class="popular-goods-button popular-goods-button-buy" type="button">Купить</button>
+                            <button class="popular-goods-button popular-goods-button-bookmarks" type="button">В закладки</button>
+                        </div>
+                    </div>
+
                     <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 2000</a>
-                    <p class="popular-goods-butoon-price"> 12500 P.</p>
-                    <div>
-                        <button type="button">Купить</button>
-                        <button type="button">В закладки</button>
+                    <div class="popular-goods-price-container">
+                        <p class="popular-goods-butoon-price">
+                            <span class="visually-hidden">Новая цена</span>
+                           12500 P.</p>
                     </div>
-                </li>
+
+                </li>                                              
             </ul>
         </section>
         <section>
@@ -229,49 +279,49 @@
             <ul class="popular-manufacturers-list wrapper">
                 <li class="popular-manufacturers-item">
                     <!--Карточка 1-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer1.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 2-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer2.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 3-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer3.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 4-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer4.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 5-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer5.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 6-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer6.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 7-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer7.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
                 <li class="popular-manufacturers-item">
                     <!--Карточка 8-->
-                    <a href="#">
+                    <a class="popular-manufacturers-link" href="#">
                         <img src="./img/content/producer8.png" width="" height="" alt="Логотип">
                     </a>
                 </li>
@@ -279,10 +329,10 @@
         </section>
         <!--Сервисы-->
         <section class="services">
-            <div class="wrapper">
+            <div class=" wrapper">
                 <h2 class="service-title">Сервисы</h2>
-                <p>Хороший интернет-магазин отличается от плохого не только ценами! </p>
-                <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами! </p>
+                <p class="service-text-second">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <div class="services-container">
                     <ul class="services-list">
                         <li class="services-list-item">
@@ -305,9 +355,7 @@
                         <input class="service-radio visually-hidden" type="radio" id="delivery" name="service-radio" checked>
                         <div class="service-variant-item service-variant-delivery">
                             <h2 class="service-variant-title">Доставка</h2>
-                            <p class="service-variant-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершеlнно бесплатно!
-                                Ведь мы неплохо заработаем,
-                                поднимая его на ваш этаж!
+                            <p class="service-variant-text">Мы с удовольствием доставим ваш товар прямо к&nbsp; вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
                             </p>
                         </div>
                         <input class="service-radio visually-hidden" type="radio" id="guarantee" name="service-radio">
@@ -330,13 +378,19 @@
             </div>
             </div>
         </section>
+        <!--КАРТА-->
 
-        <section class="delivery-partners-map">
+        <section class="delivery-partners-map wrapper">
             <div class="delivery-partners">
-                <h2 class="delivery-partners-map-h2"> &laquo;Компания Техномарт&raquo; </h2>
-
-                <p>Мы можем доставить ваш товар в самые отдаленные точки Росии!
+                <h2 class="delivery-partners-h2"> Компания &laquo;Техномарт&raquo; </h2>
+                <p class="delivery-partners-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастробайтерах.</p>
+                <p class="delivery-partners-text-second">Мы можем доставить ваш товар в самые отдаленные точки Росcии!
                     Техномарт работает со многими транспортными компаниями:</p>
+
+
+
+
+
                 <ul class="delivery-partners-list">
                     <li class="delivery-partner-item">Деловые линии</li>
                     <li class="delivery-partner-item">Автотрейдинг</li>
@@ -347,6 +401,7 @@
 
             <div class="contats-map">
                 <h2 class="contats-map-h2">Контакты</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1592480687728!5m2!1sru!2sru" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <p class="contats-map-text">Вы можете забрать товар сами,
                     заехав в наш офис:</p>
                 <div class="map">
@@ -467,7 +522,10 @@
         <input type="submit" name="cheсkorder" id="" value="Оформить заказ">
         </form>
     </div>
+    <!--поп ап окно карта -->
+    <div class="">
 
+    </div>
 
 </body>
 
