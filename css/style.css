@@ -63,7 +63,7 @@ img {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 
@@ -778,40 +778,10 @@ a {
     background: red;
     border: 2px solid var(--wight);
 }
-
+/*Карточки товаров*/
 .popular-goods-section {
     overflow-x: hidden;
 }
-
-/*Карточки товаров*/
-
-/* 
-Результат вы можете увидеть на рисунке и убедиться, что он — наконец-то! — работает! Вы наверняка уже догадались, как применить этот эффект ко всем четырем углам. Вам потребуются четыре градиента и код, подобный следующему:
-background: linear-gradient(135deg, transparent 15px, #58a 0) top left,
-
-linear-gradient(-135deg, transparent 15px, #655 0) top right,
-
-linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,
-
-linear-gradient(45deg, transparent 15px, #655 0) bottom left;
-background-size: 50% 50%;
-background-repeat: no-repeat;*/
-
-.var2 {
-    background: #58a;
-    background: linear-gradient(-135deg, transparent 26px, red 0) top right, linear-gradient(-45deg, transparent 26px, red 0) bottom right;
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 25px 65px 25px 20px;
-    display: inline-block;
-    margin: 0 auto;
-    border-radius: 10px 0 0 10px;
-    color: #fff;
-    font-size: 22px;
-}
-
 
 .popular-goods {
     background-color: #F9F5F0;
@@ -824,7 +794,6 @@ background-repeat: no-repeat;*/
     margin-bottom: 20px;
 
 }
-
 
 .popular-goods-heading {
     width: 60%;
@@ -855,13 +824,13 @@ background-repeat: no-repeat;*/
     list-style-type: none;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 49px;
+    margin-bottom: 48px;
     width: calc(100% + 20px);
 
 }
 
 .popular-goods-item {
-    padding-bottom: 92px;
+    padding-bottom: 22px;
     width: 220px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -874,7 +843,7 @@ background-repeat: no-repeat;*/
 
 .popular-goods-img-block {
     width: 100%;
-    height: 150px;
+    height: 152px;
     margin-bottom: 15px;
 }
 
@@ -920,7 +889,7 @@ background-repeat: no-repeat;*/
     background-image: url("../img/svg/icon-cart.svg");
     width: 15px;
     height: 15px;
-    z-index: 100;
+    z-index: 200;
 }
 
 .popular-goods-button-bookmarks {
@@ -991,44 +960,44 @@ position: relative;
     
 }
 .popular-goods-price-container {
+
     position: relative;
-    bottom: 0;
-    top: 0px;
-    right: 0px;
+    
 }
 
 .popular-goods-butoon-price-old {
+    margin: 2px 0 9px 79px;
     color: #A9A9A9;
-	text-decoration: line-through;
+    text-decoration: line-through;
     font-size: 18px;
-    font-weight: bold;
-}
+    font-weight: bold;}
 .popular-goods-item-links {
 
     width: 195px;
     display: inline-block;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 0 0 24px;
     color: #000000;
     font-weight: bold;
+    font-family: PT Sans;
+    line-height: 21px;
 }
 
 .popular-goods-butoon-price {
-    background: linear-gradient(-135deg, transparent 26px, var(--basic-red) 0) top right, linear-gradient(-45deg, transparent 26px, var(--basic-red) 0) bottom right;
+        background: linear-gradient(-135deg, transparent 26px, var(--basic-red) 0) top right, linear-gradient(-45deg, transparent 26px, var(--basic-red) 0) bottom right;
     background-size: 100% 50%;
     background-repeat: no-repeat;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 7px 74px 7px 12px;
+    padding: 7px 62px 7px 31px;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0 0 0 46px;
     color: var( --wight);
     font-size: 17px;
-    letter-spacing: 2px;
     font-weight: bold;
-    
-    
+    font-family: PT Sans;
+
 }
 
 .popular-manufacturers {
@@ -1100,7 +1069,8 @@ position: relative;
     width: 100%;
     background-color: #F1F5F7;
     padding-top: 0px;
-    padding-bottom: 100px;
+    padding-bottom: 23px;
+    margin-bottom: 46px;
 
 }
 
@@ -1186,11 +1156,12 @@ position: relative;
 .service-variant-item {
     display: none;
     min-height: 261px;
-
-}
+    }
 
 .service-radio:checked + .service-variant-item {
     display: block;
+    padding: 0;
+    margin: 0;
 }
 
 /*.service-radio:checked ~.service-label {
@@ -1209,23 +1180,28 @@ position: relative;
 }
 
 .service-variant-text {
-    padding: 0;
+   padding: 0;
     margin: 0 0 0 29px;
-    width: 324px;
-    word-spacing: -1px;
+    width: 274px;
+    word-spacing: 1px;
+
 }
 
 .service-variant-delivery {
 
     background: url("../img/svg/avto-delivery.svg") no-repeat top right;
+    background-position-y: 20px;
+    
 }
 
 .service-variant-guarantee {
     background: url("../img/svg/guarantee.svg") no-repeat top right;
+    background-position-y: 20px;
 }
 
 .service-variant-credit {
     background: url("../img/svg/credit.svg") no-repeat top right;
+    background-position-y: 20px;
 }
 
 .service-variant-request {
@@ -1237,14 +1213,7 @@ position: relative;
 .delivery-partners-map {
     display: grid;
     grid-template-columns: auto 300px;
-
-    margin-bottom: 95px;
-
-
-
-
-    outline: 1px solid black;
-
+    margin-bottom: 76px;
 }
 
 .delivery-partners-h2 {
@@ -1255,6 +1224,8 @@ position: relative;
     line-height: 29px;
     text-transform: uppercase;
     color: #000000;
+       margin-bottom: 23px;
+    
 
 }
 
@@ -1290,7 +1261,7 @@ position: relative;
     font-size: 15px;
     list-style: none;
     line-height: 36px;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
 
 
 }
@@ -1314,12 +1285,12 @@ position: relative;
 
 
 .delivery-partners-link {
-    background-color: var(--basic-red);
-    padding: 9px;
+   background-color: var(--basic-red);
+    padding: 12px 36px 9px 39px;
     color: var(--wight);
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
     text-transform: uppercase;
+    font-stretch: ultra-condensed;
 }
 
 .contats-map-text {
@@ -1330,9 +1301,17 @@ position: relative;
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+    margin-bottom: 33px;
 
 }
-
+.contats-map {
+    
+    flex-direction:column;
+    justify-content: flex-start;
+    margin: -2px 0 0 0;
+    padding: 0;
+    position: relative
+}
 .contats-map-h2 {
     font-family: Cuprum;
     font-style: normal;
@@ -1341,16 +1320,16 @@ position: relative;
     line-height: 30px;
     text-transform: uppercase;
     color: #000000;
-
-
+}
+.map-container {
+    margin-bottom: 24px;
 }
 
 .map-link {
     background-color: var(--basic-red);
-    padding: 12px;
+    padding: 12px 60px 11px 63px;
     color: var(--wight);
     font-size: 14px;
-    line-height: 18px;
     text-transform: uppercase;
 }
 
@@ -1454,7 +1433,7 @@ position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 43px;
+    padding-bottom: 54px;
 
 }
 
@@ -1465,7 +1444,7 @@ position: relative;
 
 .footer-logo {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .up-footer-right {
@@ -1489,19 +1468,20 @@ position: relative;
 
     display: block;
     font-style: normal;
-    margin-bottom: 5px;
+       margin-bottom: 1px;
+    padding: 0 0 0 1px;
 }
 
 .tel-footer {
-
+    padding-left: 3px;
     color: var(--main-background-color);
 
 }
 
 .up-footer-nav {
     width: 100%;
-    margin-bottom: 39px;
-    margin-top: 2px;
+    margin-bottom: 34px;
+   
 }
 
 .up-footer-list {
@@ -1568,7 +1548,7 @@ position: relative;
 }
 
 .last-footer-copyright {
-    margin: 1px 0 0 1px;
+    margin: 1px 0 -4px 1px;
     padding: 0;
     font-size: 16px;
 }
@@ -1582,6 +1562,8 @@ position: relative;
 .social-icons-list {
     margin: 0 0 0 45px;
     padding: 0;
+    padding-top: 5px;
+    
     width: 131px;
     display: flex;
     flex-direction: row;
@@ -1657,7 +1639,7 @@ position: relative;
 
 .last-footer-feedback {
     padding: 0;
-    margin: 0;
+    margin:  0 0 -4px 0;
     font-size: 16px;
 }
 
@@ -1667,7 +1649,7 @@ position: relative;
 
 .last-footer-made {
     padding: 0;
-    margin: 0;
+    margin: 0 0 -4px 0;
     font-size: 16px;
 }
 
