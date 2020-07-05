@@ -260,9 +260,9 @@
 
                     <a class="popular-goods-item-links" href="#">Перфоратор BOSCH BFG 2000</a>
                     <div class="popular-goods-price-container">
-                       <p class="popular-goods-butoon-price-old">
+                        <p class="popular-goods-butoon-price-old">
                             <span class="visually-hidden">Старая цена</span>
-                            
+
                         </p>
                         <p class="popular-goods-butoon-price">
                             <span class="visually-hidden">Новая цена</span>
@@ -335,17 +335,21 @@
                 <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами! </p>
                 <p class="service-text-second">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <div class="services-container">
+                    <input class="service-radio service-input-delivery visually-hidden" type="radio" id="delivery" name="service-radio" checked>
+                    <input class="service-radio service-input-guarantee visually-hidden" type="radio" id="guarantee" name="service-radio">
+                    <input class="service-radio  service-input-credit visually-hidden" type="radio" id="credit" name="service-radio">
+
                     <ul class="services-list">
-                        <li class="services-list-item">
-                            <label for="delivery" class="services-label">
+                        <li class="services-list-item service-label-delivery">
+                            <label for="delivery" class=" service-label-delivery services-label">
                                 Доставка
                             </label>
                         </li>
-                        <li class="services-list-item"> <label for="guarantee" class="services-label">
+                        <li class="services-list-item"> <label for="guarantee" class=" service-label-guarantee services-label">
                                 Гарантия
                             </label></li>
                         <li class="services-list-item">
-                            <label for="credit" class="services-label">
+                            <label for="credit" class=" service-label-credit services-label">
                                 Кредит
                             </label>
                         </li>
@@ -353,25 +357,23 @@
 
 
                     <div class="service-variant-list">
-                        <input class="service-radio visually-hidden" type="radio" id="delivery" name="service-radio" checked>
+
                         <div class="service-variant-item service-variant-delivery">
                             <h2 class="service-variant-title">Доставка</h2>
                             <p class="service-variant-text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь&nbsp;мы неплохо заработаем,<br> поднимая&nbsp;его на ваш этаж! </p>
                         </div>
-                        <input class="service-radio visually-hidden" type="radio" id="guarantee" name="service-radio">
+
                         <div class="service-variant-item service-variant-guarantee">
                             <h2 class="service-variant-title">Гарантии</h2>
                             <p class="service-variant-text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
                             </p>
                         </div>
-                        <input class="service-radio visually-hidden" type="radio" id="credit" name="service-radio">
+
                         <div class="service-variant-item service-variant-credit">
                             <h2 class="service-variant-title">Кредит</h2>
-                            <p class="service-variant-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                                Ведь мы неплохо заработаем,
-                                поднимая его на ваш этаж!Залезть в долговую яму стало проще!Кредитные консудьтанты придут вам на помощь.
+                            <p class="service-variant-text service-variant-text-credit">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.
                             </p>
-                            <a class="service-variant-request" href="">отправить заявку</a>
+                            <a class="service-variant-request" href="#">отправить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -403,8 +405,11 @@
                 <h2 class="contats-map-h2">Контакты</h2>
                 <p class="contats-map-text">Вы можете забрать товар сами,
                     заехав в наш офис:</p>
-                
-                <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1592480687728!5m2!1sru!2sru" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+
+                <a href="#" class="map-container">
+                <img src="./img/content/map_img.jpg" alt="Карта"
+                width="300" height="138">
+                </a>
 
                 <a class="map-link" href="#"> Заблудились? Напишите нам!
                 </a>
@@ -508,30 +513,48 @@
         </div>
 
     </footer>
+    <!--поп ап окно товар в корзине -->
+    <section class="popup popup-good-in-cart">
+         
+         <div class="popup-good-in-cart-allflex">
+          <h3 class="good-in-cart-heading">Товар добавлен в корзину!</h3>
+        <div class="good-in-cart-button-container">
+         <button class="popup-good-in-cart-button popup-checkout" type="button" aria-label="Оформить заказ">Оформить заказ </button>
+         <button class=" popup-good-in-cart-button popup-next-shopping" type="button" aria-label="Продолжить покупки"> Продолжить покупки</button>
+         </div>
+         </div>
+        <button class="popup-close" type="button" aria-label="Закрыть"> </button>
+    </section>
+    
     <!--поп ап окно напишите -->
-    <div class="popup-feedback-1" <form action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма обратной связи">
-        <h3 class="visually-hidden">Окно напишите нам</h3>
-        <label for="full-name">Ваше имя</label>
-        <input type="text" name="name" id="full-name" placeholder="Имя Фамилия">
-        <label for="email">Ваш e-mail:</label>
-        <input type="text" name="email" id="email" placeholder="email@example.com">
-        <label for="text-letter">Текст письма</label>
-        <textarea name="text-letter" id="text-letter" rows="5">В свободной форме</textarea>
-        <!-- <label for="text-letter">Оформить заказ</label>-->
-        <input type="submit" name="cheсkorder" id="" value="Оформить заказ">
+    
+    <section class=" popup popup-feedback">
+        <form action="https://echo.htmlacademy.ru/courses" method="post" aria-label="Форма обратной связи">
+            <h3 class="visually-hidden">Окно напишите нам</h3>
+            <div class="popup-feedback-container"><label class="popup-feedback-label" for="full-name">Ваше имя:</label>
+                <label class="popup-feedback-label" for="email">Ваш e-mail:</label>
+                <input type="name" name="name" id="full-name" placeholder="Имя Фамилия">
+                <input class="popup-feedback-email" type="email" name="email" id="email" placeholder="email@example.com">
+            </div>
+            <label class="popup-feedback-label" for="text-letter">Текст письма:</label>
+            <textarea class="feedback-text-letter" name="text-letter" id="text-letter" rows="6" placeholder=" В свободной форме"></textarea>
+            <!-- <label for="text-letter">Оформить заказ</label>-->
+            <input type="submit" name="cheсkorder" id="" value="Оформить заказ">
         </form>
-    </div>
+        <button class="popup-close" type="button" aria-label="Закрыть"> </button>
+    </section>
     <!--поп ап окно карта -->
-    <div class="">
-
-    </div>
-
-</body>
+    <section class="popup popup-map">
+        <h3 class="visually-hidden">Как до нас добраться</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1592480687728!5m2!1sru!2sru" width="943" height="449" allowfullscreen="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            
+        </iframe>
+        <button class="popup-close" type="button" aria-label="Закрыть"> </button>
+    </section>
+  <script src='js/script.js'>
+  </script>   
+   </body>
 
 </html>
-< -->
-    <!-- доделать!!!!!!!! -->
-    <!--соц сети-->
-    <!---список производителей--->
-    <!-- шапка сайта-->
-    <!--поп ап окно напишите нам -->
+
+   

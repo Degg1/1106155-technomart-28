@@ -99,23 +99,6 @@
 
         </nav>
     </header>
-    <!--Блок логинов -->
-    <!-- <div>
-            <img src="./img/svg/icon-user.svg" alt="">
-            <p>
-                Равшан Джамшутович
-            </p><img src="./img/svg/icon-logout.svg" alt="">
-            <button>Выход</button>
-
-            <ul>
-                <li>
-                    <a href=""> Мои заказы</a>
-                </li>
-                <li>
-                    <a href=""> Личный кабинет</a>
-                </li>
-            </ul>
-        </div>-->
 
     <main>
 
@@ -127,57 +110,66 @@
                     <a class="bread-crambs-link" href="index.html"><img src="./img/svg/icon-home.svg" alt="Логотип"></a>
                 </li>
                 <li class="bread-crambs-item">
-                    <a class="bread-crambs-link" href=#>Каталог </a>
+                    <a class="bread-crambs-link bread-crambs-link-catalog " href=#>Каталог </a>
                 </li>
                 <li class="bread-crambs-item">
-                    <a class="bread-crambs-link" href=#>Инструмент </a>
+                    <a class="bread-crambs-link bread-crambs-link-tool" href=#>Инструмент </a>
                 </li>
                 <li class="bread-crambs-item">
-                    <a class="bread-crambs-link" href=#>Перфораторы</a>
+                    <a class="bread-crambs-link bread-crambs-link-hummers" href=#>Перфораторы</a>
                 </li>
             </ul>
         </section>
         <h2 class=" title-category wrapper">Перфораторы</h2>
         <div class="wrapper catalog-section">
             <aside class="filter">
-                <h2>Фильтр:</h2> <!-- Посмотреть с заголовками-->
+                <h2 class="filter-heading">Фильтр:</h2>
                 <form action="https://echo.htmlacademy.ru/courses" method="post">
                     <h3 class="visually-hidden">Диапазон цены</h3>
-                    <div class="">
-                        <label for="dayscount">Цена:</label>
-                        0<input type="range" id="price range" name="price count" min="100" max="30000" step="100"> 30000
+                    <label class="filter-price-label" for="price-range">Цена:</label>
+                    <div class="filter-price-range-container">
+                        <input type="range" id="price-range" name="price count" min="0" max="30000" step="100" class="price-range" value="0">
                     </div>
-                    <h3>Производители:</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="bosch" id="bosch" checked>
-                            <label for="bosch">Bosch</label>
+                    <div class="price-value-container">
+                        <span class="price-value-min">0</span>
+                        <span class="price-value-line">
+                            &ndash;
+                        </span>
+                        <span class="price-value-max">30000</span> </div>
+                    <h3 class="filter-list-heading">Производители:</h3>
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <input class=" visually-hidden filter-checkbox-input" type="checkbox" name="bosch" id="bosch" checked>
+
+                            <label class="filter-checkbox-label" for="bosch">Bosch</label>
                         </li>
-                        <li>
-                            <input type="checkbox" name="interskol" id="interskol">
-                            <label for="interskol">Интерскол</label>
+                        <li class="filter-item">
+                            <input class="visually-hidden filter-checkbox-input" type="checkbox" name="interskol" id="interskol">
+
+                            <label class="filter-checkbox-label" for="interskol">Интерскол</label>
                         </li>
-                        <li>
-                            <input type="checkbox" name="makita" id="makita" checked>
-                            <label for="makita">Makita</label>
+                        <li class="filter-item">
+                            <input class=" visually-hidden filter-checkbox-input" type="checkbox" name="makita" id="makita" checked> <label class="filter-checkbox-label" for="makita">Makita</label>
                         </li>
-                        <li>
-                            <input type="checkbox" name="dewalt" id="dewalt">
-                            <label for="dewalt">Dewalt</label> </li>
-                        <li>
-                            <input type="checkbox" name="hitachi" id="hitachi">
-                            <label for="hitachi">Hitachi</label>
+                        <li class="filter-item">
+                            <input class=" visually-hidden filter-checkbox-input" type="checkbox" name="dewalt" id="dewalt">                                           
+                            <label class=" filter-checkbox-label" for="dewalt">Dewalt</label> </li>
+                        <li class="filter-item">
+                            <input class=" visually-hidden filter-checkbox-input" type="checkbox" name="hitachi" id="hitachi">
+                            <label class="filter-checkbox-label" for="hitachi">Hitachi</label>
                         </li>
                     </ul>
-                    <h3>Питание:</h3>
-                    <ul>
-                        <li>
-                            <input type="radio" name="battery" id="battery" checked>
-                            <label for="battery">Аккумуляторные</label>
+                    
+                    <!-- Если включить оба то не выключаются! (по иде должна быть возможность выбрать оба переключателя независимо -->
+                    <h3 class="filter-list-heading filter-list-heading-source">Питание:</h3>
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <input  class=" visually-hidden filter-checkbox-input-sourse" type="radio" name="battery-power" id="battery" checked>
+                            <label class="filter-checkbox-label-source" for="battery">Аккумуляторные</label>
                         </li>
-                        <li>
-                            <input type="radio" name="power" id="network">
-                            <label for="network">Сетевые</label>
+                       <li class="filter-item ">
+                            <input  class="visually-hidden filter-checkbox-input-sourse" type="radio" name="network-power" id="network">
+                            <label class="filter-checkbox-label-source" for="network">Сетевые</label>
                         </li>
                     </ul>
                     <input type="submit" value="Показать">
@@ -188,35 +180,37 @@
                     <h2 class="sorting-title">Сортировка:</h2>
                     <ul class="sorting-list">
                         <li class="sorting-item sorting-item-price">
-                            <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-price">
+                            <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-price" checked>
                             <label for="sorting-type-price" class="sorting-label">по цене</label>
                         </li>
                         <li class="sorting-item">
                             <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-by-type">
                             <label for="sorting-type-by-type" class="sorting-label">
-                            по типу</label>
+                                по типу</label>
                         </li>
                         <li class="sorting-item">
                             <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-function">
                             <label for="sorting-type-function" class="sorting-label">
-                            по функционалу</label>
+                                по функционалу</label>
                         </li>
-                        
-                        
+
+
                         <li class="arrow-up">
-                          <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-arrow-up"> 
-                           <label for="sorting-arrow-up" class="sorting-label">
-                               <svg class="sorting-arrow-up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#C1C6CE" d="M5.5 0L0 10h11z"/></svg>
-                        
-        </label> 
-                            
+                            <input type="radio" class="sorting-radio visually-hidden" name="sorting-direction" id="sorting-arrow-up" checked>
+                            <label for="sorting-arrow-up" class="sorting-label">
+                                <svg class=" sorting-arrow sorting-arrow-up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                    <path d="M5.5 0L0 10h11z" /></svg>
+
+                            </label>
+
                         </li>
                         <li class="arrow-down">
-                        <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-arrow-down"> 
-                           <label for="sorting-arrow-down" class="sorting-label"> 
-                               <svg class="sorting-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#C1C6CE" d="M5.5 10L0 0h11"/></svg>
-                    
-        </label>     
+                            <input type="radio" class="sorting-radio visually-hidden" name="sorting-direction" id="sorting-arrow-down">
+                            <label for="sorting-arrow-down" class="sorting-label">
+                                <svg class=" sorting-arrow sorting-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                    <path d="M5.5 10L0 0h11" /></svg>
+
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -437,15 +431,17 @@
                     <li class="catalog-pages-item"><a href="" class="catalog-pages-link  catalog-pages-link-active">1</a></li>
                     <li class="catalog-pages-item"><a href="" class="catalog-pages-link">2</a></li>
                     <li class="catalog-pages-item"><a href="" class="catalog-pages-link">3</a></li>
-                    <li class="catalog-pages-item"><a href="" class="catalog-pages-link">Следующая</a></li>
+                    <li class="catalog-pages-item"><a href="" class="catalog-pages-link catalog-pages-link-next">Следующая</a></li>
                 </ul>
             </div>
         </div>
-        <div>
-            <h2>
+        <div class="container-text-down">
+            <h2 class=" wrapper text-down-heading">
                 Пара слов о перфораторах
             </h2>
-            <p>Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, в бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дверь.
+            <p class=" text-down wrapper ">Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+                В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дверь.
             </p>
         </div>
     </main>
@@ -546,7 +542,20 @@
         </div>
 
     </footer>
+    <!--поп ап окно товар в корзине -->
+    <section class="popup popup-good-in-cart">
 
+        <div class="popup-good-in-cart-allflex">
+            <h3 class="good-in-cart-heading">Товар добавлен в корзину!</h3>
+            <div class="good-in-cart-button-container">
+                <button class="popup-good-in-cart-button popup-checkout" type="button" aria-label="Оформить заказ">Оформить заказ </button>
+                <button class=" popup-good-in-cart-button popup-next-shopping" type="button" aria-label="Продолжить покупки"> Продолжить покупки</button>
+            </div>
+        </div>
+        <button class="popup-close" type="button" aria-label="Закрыть"> </button>
+    </section>
+    <script src='js/script.js'>
+    </script>
 </body>
 
 </html>
