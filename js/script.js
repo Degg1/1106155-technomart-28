@@ -12,6 +12,10 @@ let closeButtons = document.querySelectorAll('.popup-close');
 let buttonsBuy = document.querySelectorAll('.popular-goods-button-buy');
 let sortingLabelDirection = document.querySelectorAll('.sorting-label-direction');
 let sortingLabel = document.querySelectorAll('.sorting-label');
+let ticks = document.querySelectorAll('.tick');
+let galleryItems = document.querySelectorAll('.gallery-item');
+let bullits = document.querySelectorAll('.round-button-label');
+let services = document.querySelectorAll('.services-label');
 
 if (mapButton) {
   mapButton.addEventListener('click', function (e) {
@@ -71,3 +75,48 @@ if (sortingLabelDirection) {
     });
   });
 }
+
+if (ticks) {
+  ticks.forEach(function (tick) {
+    tick.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      galleryItems.forEach(function (item) {
+        item.classList.toggle('gallery-item-active');
+        if (item.classList.contains('gallery-item-active')) {
+          let bullit = document.querySelector('.' + item.dataset.bullit);
+          let activeBullit = document.querySelector('.round-button-active');
+          activeBullit.classList.remove('round-button-active');
+          bullit.classList.add('round-button-active');
+        }
+      });
+    });
+  });
+};
+
+if (bullits) {
+  bullits.forEach(function (bullit) {
+    bullit.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      let activeBullit = document.querySelector('.round-button-active');
+      activeBullit.classList.remove('round-button-active');
+      this.classList.add('round-button-active');
+      let activeSlide = document.querySelector('.gallery-item-active');
+      activeSlide.classList.remove('gallery-item-active');
+      let newActiveSlide = document.querySelector('.' + this.dataset.slide);
+      newActiveSlide.classList.add('gallery-item-active');
+    });
+  });
+}
+
+services.forEach(function(service){
+  service.addEventListener('click', function(evt){
+    evt.preventDefault();
+    let activeService = document.querySelector('.service-variant-item-active');
+    activeService.classList.remove('service-variant-item-active');
+    let newActiveService = document.querySelector('.' + this.dataset.screen);
+    newActiveService.classList.add('service-variant-item-active');
+    let activeLabel = document.querySelector('.services-label-active');
+    activeLabel.classList.remove('services-label-active');
+    this.classList.add('services-label-active');
+  });
+});

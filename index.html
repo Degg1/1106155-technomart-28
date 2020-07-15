@@ -113,16 +113,14 @@
         <li class="benefits-list-item-slider">
           <div class="gallery">
             <!-- cлайдер-->
-            <input type="radio" name="switch" id="switch-first" class="switch-first visually-hidden" checked>
-            <input type="radio" name="switch" id="switch-second" class="switch-second visually-hidden">
             <ul class="gallery-list">
-              <li class="gallery-item gallery-item-drills ">
+              <li class="gallery-item gallery-item-drills gallery-item-active" data-bullit="round-button-label-first">
                 <h3 class="gallery-header">Дрели</h3>
                 <p class="gallery-text">Соседям на радость</p>
                 <!-- банер-->
                 <a class="gallery-catalog-link btn-red" href="./catalog.html">Открыть каталог</a>
               </li>
-              <li class="gallery-item gallery-item-hammers">
+              <li class="gallery-item gallery-item-hammers" data-bullit="round-button-label-second">
                 <h3 class="gallery-header">Перфораторы</h3>
                 <p class="gallery-text">Настоящие мужские игрушки</p>
                 <!-- банер-->
@@ -130,25 +128,25 @@
               </li>
             </ul>
             <!--Стрелки-->
-            <label class="tick tick-left" for="switch-first">
+            <a href=# class="tick tick-left">
               <img src="./img/svg/icon-left.svg" alt="Показать первый слайд" width="22" height="40">
-              <span class="visually-hidden ">Показать первый слайд</span>
-            </label>
-            <label class="tick tick-right" for="switch-second">
+              <span class="visually-hidden ">Показать предыдущий слайд</span>
+            </a>
+            <a href=# class="tick tick-right">
               <img src="./img/svg/icon-right.svg" alt="Показать второй слайд" width="22" height="40">
-              <span class="visually-hidden ">Показать второй слайд</span>
-            </label>
+              <span class="visually-hidden ">Показать следующий слайд</span>
+            </a>
             <!--Круглые кнопки -->
             <ul class="round-button">
               <li>
-                <div class="round-button-label round-button-label-first">
+                <a href=# class="round-button-label round-button-label-first round-button-active" data-slide="gallery-item-drills">
                   <span class="visually-hidden ">первая страница</span>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="round-button-label round-button-label-second">
-                  <span class="visually-hidden ">вторая страница</span>
-                </div>
+                <a href=# class="round-button-label round-button-label-second" data-slide="gallery-item-hammers">
+                  <span class="visually-hidden">вторая страница</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -299,7 +297,7 @@
         <li class="popular-manufacturers-item">
           <!--Карточка 6-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer6.png"  width="121" height="73" alt="LG">
+            <img src="./img/content/producer6.png" width="121" height="73" alt="LG">
           </a>
         </li>
         <li class="popular-manufacturers-item">
@@ -323,26 +321,25 @@
         <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами! </p>
         <p class="service-text service-text-second">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="services-container">
-          <input class="service-radio service-input-delivery visually-hidden" type="radio" id="delivery" name="service-radio" checked>
-          <input class="service-radio service-input-guarantee visually-hidden" type="radio" id="guarantee" name="service-radio">
-          <input class="service-radio  service-input-credit visually-hidden" type="radio" id="credit" name="service-radio">
           <ul class="services-list">
             <li class="services-list-item service-label-delivery">
-              <label for="delivery" class=" service-label-delivery services-label">
+              <a href="#" class="service-label-delivery services-label services-label-active" data-screen="service-variant-delivery">
                 Доставка
-              </label>
+              </a>
             </li>
-            <li class="services-list-item"> <label for="guarantee" class=" service-label-guarantee services-label">
-                Гарантия
-              </label></li>
             <li class="services-list-item">
-              <label for="credit" class=" service-label-credit services-label">
+              <a href="#" class="service-label-guarantee services-label" data-screen="service-variant-guarantee">
+                Гарантия
+              </a>
+            </li>
+            <li class="services-list-item">
+              <a href="#" class="service-label-credit services-label" data-screen="service-variant-credit">
                 Кредит
-              </label>
+              </a>
             </li>
           </ul>
           <div class="service-variant-list">
-            <div class="service-variant-item service-variant-delivery">
+            <div class="service-variant-item service-variant-delivery service-variant-item-active">
               <div class="service-variant-item-content">
                 <h2 class="service-variant-title">Доставка</h2>
                 <p class="service-variant-text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь&nbsp;мы неплохо заработаем,<br> поднимая&nbsp;его на ваш этаж! </p>
