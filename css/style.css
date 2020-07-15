@@ -9,7 +9,9 @@
   --basic-main: #f3f7f9;
   --basic-red: #ee3643;
   --benefits-bg: #3bbce3;
-  --benefits-link-bg: rgba(255, 255, 255, 0.4);
+  --benefits-link-bg: rgba(255, 255, 255, 0.3);
+  --benefits-link-hover-bg: rgba(197, 197, 197, 0.3);
+  --benefits-link-active-bg: rgba(169, 169, 169, 0.3);
   --border-button-color: #e5e5e5;
   --box-shadow-logo: #8e1e26;
   --btn-red-hover-bg: #ca2c37;
@@ -44,6 +46,7 @@
   --up_down-dark: #293449;
   --up_down-light: #32425c;
   --wight: #ffffff;
+  --create-order-active: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -320,16 +323,35 @@ a {
   background-image: url("../img/svg/icon-bookmark.svg");
 }
 
-.up-header-link-bookmarks:active,
+
 .up-header-link-bookmarks:focus {
   background: var(--active-bookmark-bg);
   outline: none;
 }
 
-.up-header-link-cart:active,
+.up-header-link-bookmarks:active {
+  background: var(--active-bookmark-bg);
+  color: var(--create-order-active);
+  outline: none;
+}
+
+.up-header-link-bookmarks:active::before {
+  opacity: 0.3;
+}
+
 .up-header-link-cart:focus {
   background: var(--active-bookmark-bg);
   outline: none;
+}
+
+.up-header-link-cart:active {
+  background: var(--active-bookmark-bg);
+  color: var(--create-order-active);
+  outline: none;
+}
+
+.up-header-link-cart:active .cart-caption::before {
+  opacity: 0.3;
 }
 
 .cart-caption {
@@ -382,6 +404,14 @@ a {
 .create-order:focus {
   background: var(--success);
   outline: none;
+}
+
+.create-order:active {
+  background: var(--basic-green);
+}
+
+.create-order:active .create-order-text {
+  color: var(--create-order-active);
 }
 
 .center-header {
@@ -892,7 +922,12 @@ a {
 
 .benefits-list-link:focus,
 .benefits-list-link:hover {
-  background-color: rgb(197, 197, 197, 0.3);
+  background-color: var(--benefits-link-hover-bg);
+  outline: 0;
+}
+
+.benefits-list-link:active {
+  background-color: var(--benefits-link-active-bg);
   outline: 0;
 }
 
@@ -1003,14 +1038,12 @@ a {
 }
 
 .gallery-item-drills {
-  background: var(--slider-bg) url("../img/content/banner2.jpg") no-repeat top
-    left;
+  background: var(--slider-bg) url("../img/content/banner2.jpg") no-repeat top left;
   background-size: cover;
 }
 
 .gallery-item-hammers {
-  background: var(--slider-bg) url("../img/content/banner1.jpg") no-repeat top
-    left;
+  background: var(--slider-bg) url("../img/content/banner1.jpg") no-repeat top left;
   background-size: cover;
 }
 
@@ -1353,8 +1386,7 @@ a {
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  background: linear-gradient(-135deg, transparent 26px, var(--basic-red) 0) top
-      right,
+  background: linear-gradient(-135deg, transparent 26px, var(--basic-red) 0) top right,
     linear-gradient(-45deg, transparent 26px, var(--basic-red) 0) bottom right;
   background-repeat: no-repeat;
   background-size: 100% 50%;
@@ -1419,6 +1451,12 @@ a {
 .popular-manufacturers-link:focus {
   outline: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popular-manufacturers-link:active {
+  outline: none;
+  opacity: 0.5;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .popular-manufacturers-item {
@@ -1514,7 +1552,7 @@ a {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
 
   background: var(--up_down-light);
   border-top: 1px solid var(--tab-border-color);
@@ -1575,9 +1613,7 @@ a {
   border-color: var(--wight);
 }
 
-.service-input-guarantee:checked:focus
-  ~ .services-list
-  .service-label-guarantee {
+.service-input-guarantee:checked:focus ~ .services-list .service-label-guarantee {
   color: var(--up_down-light);
   text-decoration: underline;
 
@@ -1585,15 +1621,11 @@ a {
   border-color: var(--wight);
 }
 
-.service-input-delivery:checked
-  ~ .service-variant-list
-  .service-variant-delivery {
+.service-input-delivery:checked ~ .service-variant-list .service-variant-delivery {
   display: block;
 }
 
-.service-input-guarantee:checked
-  ~ .service-variant-list
-  .service-variant-guarantee {
+.service-input-guarantee:checked ~ .service-variant-list .service-variant-guarantee {
   display: block;
 }
 
@@ -2245,10 +2277,8 @@ a {
   border-radius: 50%;
 }
 
-.filter-checkbox-input-sourse:checked
-  + .filter-checkbox-label-source:hover::after,
-.filter-checkbox-input-sourse:checked:focus
-  + .filter-checkbox-label-source::after {
+.filter-checkbox-input-sourse:checked + .filter-checkbox-label-source:hover::after,
+.filter-checkbox-input-sourse:checked:focus + .filter-checkbox-label-source::after {
   background: var(--filter-input-hover);
 }
 
@@ -2256,8 +2286,7 @@ a {
   color: var(--filter-input-active);
 }
 
-.filter-checkbox-input-sourse:checked:active
-  + .filter-checkbox-label-source::after {
+.filter-checkbox-input-sourse:checked:active + .filter-checkbox-label-source::after {
   background: var(--filter-input-active);
 }
 
@@ -2330,14 +2359,27 @@ a {
   cursor: pointer;
 }
 
-.sorting-label:hover,
-.sorting-label:focus {
+.sorting-label:hover {
   color: var(--basic-black);
 
   border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting-radio:checked + .sorting-label {
+.sorting-label:focus {
+  color: var(--basic-red);
+
+  border-color: transparent;
+  outline: none;
+}
+
+.sorting-label:active {
+  color: var(--basic-red);
+
+  border-color: transparent;
+  outline: none;
+}
+
+.sorting-label-active {
   color: var(--basic-red);
 
   border-color: transparent;
@@ -2357,12 +2399,16 @@ a {
   fill: var(--basic-black);
 }
 
-.sorting-radio:checked + .sorting-label .sorting-arrow {
+.sorting-label-direction-active .sorting-arrow {
   fill: var(--basic-red);
 }
 
-.sorting-radio:checked:focus + .sorting-label .sorting-arrow {
-  fill: var(--basic-black);
+.sorting-label-direction:focus .sorting-arrow {
+  fill: var(--basic-red);
+}
+
+.sorting-label-direction:active .sorting-arrow {
+  fill: var(--basic-red);
 }
 
 .sorting-arrow-up {
@@ -2563,6 +2609,7 @@ a {
 
 .up-footer-list-link {
   display: inline-block;
+  vertical-align: top;
 
   color: var(--main-background-color);
 }
@@ -3044,6 +3091,7 @@ a {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);

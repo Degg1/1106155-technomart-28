@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/normalize.min.css" rel="stylesheet">
   <link href="./css/style.min.css" rel="stylesheet">
   <title>HTML Academy: Техномарт</title>
 </head>
@@ -103,13 +103,15 @@
       <h3 class="visually-hidden">История страниц</h3>
       <ul class="bread-crambs">
         <li class="bread-crambs-item bread-crambs-item-home">
-          <a class="bread-crambs-link" href="index.html"><img src="./img/svg/icon-home.svg" alt="Главная страница"></a>
+          <a class="bread-crambs-link" href="index.html">
+            <img src="./img/svg/icon-home.svg" alt="Главная страница" width="14" height="12">
+          </a>
         </li>
         <li class="bread-crambs-item">
-          <a class="bread-crambs-link bread-crambs-link-catalog" href=#>Каталог </a>
+          <a class="bread-crambs-link bread-crambs-link-catalog" href=#>Каталог</a>
         </li>
         <li class="bread-crambs-item">
-          <a class="bread-crambs-link bread-crambs-link-tool" href=#>Инструмент </a>
+          <a class="bread-crambs-link bread-crambs-link-tool" href=#>Инструмент</a>
         </li>
         <li class="bread-crambs-item">
           <a class="bread-crambs-link bread-crambs-link-hummers" href=#>Перфораторы</a>
@@ -122,20 +124,22 @@
         <h2 class="filter-heading">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/courses" method="post">
           <h3 class="visually-hidden">Диапазон цены</h3>
-          <label class="filter-price-label" for="price-range">Цена:</label>
+          <h4 class="filter-price-label">Цена:</h4>
           <div class="filter-price-range-container">
             <div class="price-range">
               <div class="scale"></div>
-              <div class="handle handle-left"></div>
-              <div class="handle handle-right"></div>
+              <a href="#" class="handle handle-left" aria-label="Нижний предел цены"></a>
+              <a href="" class="handle handle-right" aria-label="Верхний предел цены"></a>
             </div>
           </div>
           <div class="price-value-container">
-            <input  name="min-price" type="text" class="price-value-min" value="0">
+            <label for="min-price" class="visually-hidden"></label>
+            <input name="min-price" type="text" class="price-value-min" value="0" id="min-price">
             <span class="price-value-line">
               &ndash;
             </span>
-            <input name="max-price" type="text" class="price-value-max" value="30000">
+            <label for="max-price" class="visually-hidden"></label>
+            <input name="max-price" id="max-price" type="text" class="price-value-max" value="30000">
           </div>
           <h3 class="filter-list-heading">Производители:</h3>
           <ul class="filter-list">
@@ -181,32 +185,25 @@
           <h2 class="sorting-title">Сортировка:</h2>
           <ul class="sorting-list">
             <li class="sorting-item sorting-item-price">
-              <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-price" checked>
-              <label for="sorting-type-price" class="sorting-label">по цене</label>
+              <a href="#" class="sorting-label sorting-label-active">по цене</a>
             </li>
             <li class="sorting-item">
-              <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-by-type">
-              <label for="sorting-type-by-type" class="sorting-label">
-                по типу</label>
+              <a href="#" class="sorting-label">по типу</a>
             </li>
             <li class="sorting-item">
-              <input type="radio" class="sorting-radio visually-hidden" name="sorting-type" id="sorting-type-function">
-              <label for="sorting-type-function" class="sorting-label">
-                по функционалу</label>
+              <a href="#" class="sorting-label">по функционалу</a>
             </li>
             <li class="arrow-up">
-              <input type="radio" class="sorting-radio visually-hidden" name="sorting-direction" id="sorting-arrow-up" checked>
-              <label for="sorting-arrow-up" class="sorting-label">
+              <a href="#" class="sorting-label-direction sorting-label-direction-active" aria-label="Сортировать по возрастанию">
                 <svg class=" sorting-arrow sorting-arrow-up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 0L0 10h11z" /></svg>
-              </label>
+              </a>
             </li>
             <li class="arrow-down">
-              <input type="radio" class="sorting-radio visually-hidden" name="sorting-direction" id="sorting-arrow-down">
-              <label for="sorting-arrow-down" class="sorting-label">
-                <svg class=" sorting-arrow sorting-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <a href="#" class="sorting-label-direction"  aria-label="Сортировать по убыванию">
+                <svg class="sorting-arrow sorting-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 10L0 0h11" /></svg>
-              </label>
+              </a>
             </li>
           </ul>
         </div>
@@ -510,17 +507,13 @@
         <!--соц сети-->
         <ul class="social-icons-list">
           <li class="social-icons-item">
-            <a class="social-icons-link social-icons-link-vk" href="https://vk.com">
-              <span class="visually-hidden">Вконтакте
-              </span>
-            </a>
+            <a class="social-icons-link social-icons-link-vk" href="https://vk.com" aria-label="Вконтакте"></a>
           </li>
-          <li>
-            <a class="social-icons-link social-icons-link-fb" href="https://facebook.com" aria-label="Facebook">
-            </a>
+          <li class="social-icons-item">
+            <a class="social-icons-link social-icons-link-fb" href="https://facebook.com" aria-label="Facebook"></a>
           </li>
-          <li>
-            <a class="social-icons-link social-icons-link-insta" href="#" aria-label=" Instagram"></a>
+          <li class="social-icons-item">
+            <a class="social-icons-link social-icons-link-insta" href="#" aria-label="Instagram"></a>
           </li>
         </ul>
       </div>

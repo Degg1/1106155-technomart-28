@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/normalize.min.css" rel="stylesheet">
   <link href="./css/style.min.css" rel="stylesheet">
   <title>HTML Academy: Техномарт</title>
 </head>
@@ -104,19 +104,15 @@
         </li>
         <li class="benefits-list-item benefits-list-item-tool">
           <h3 class="benefits-list-header">Инструмент</h3>
-
           <a class="benefits-list-link benefits-list-link-tool" href="#">На все случаи</a>
-
         </li>
         <li class="benefits-list-item benefits-list-item-technic">
           <h3 class="benefits-list-header">Техника</h3>
           <a class="benefits-list-link benefits-list-link-technic" href="#">Для стройки</a>
         </li>
-
         <li class="benefits-list-item-slider">
           <div class="gallery">
             <!-- cлайдер-->
-
             <input type="radio" name="switch" id="switch-first" class="switch-first visually-hidden" checked>
             <input type="radio" name="switch" id="switch-second" class="switch-second visually-hidden">
             <ul class="gallery-list">
@@ -134,9 +130,14 @@
               </li>
             </ul>
             <!--Стрелки-->
-            <label class="tick tick-left" for="switch-first"><img src="./img/svg/icon-left.svg" alt=""><span class="visually-hidden ">влево</span></label>
-            <label class="tick tick-right" for="switch-second"><img src="./img/svg/icon-right.svg" alt=""><span class="visually-hidden ">вправо</span></label>
-
+            <label class="tick tick-left" for="switch-first">
+              <img src="./img/svg/icon-left.svg" alt="" width="22" height="40">
+              <span class="visually-hidden ">Показать первый слайд</span>
+            </label>
+            <label class="tick tick-right" for="switch-second">
+              <img src="./img/svg/icon-right.svg" alt="" width="22" height="40">
+              <span class="visually-hidden ">Показать второй слайд</span>
+            </label>
             <!--Круглые кнопки -->
             <ul class="round-button">
               <li>
@@ -268,49 +269,49 @@
         <li class="popular-manufacturers-item">
           <!--Карточка 1-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer1.png" width="126" height="37" alt="Логотип">
+            <img src="./img/content/producer1.png" width="126" height="37" alt="Bosch">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 2-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer2.png" width="123" height="40" alt="Логотип">
+            <img src="./img/content/producer2.png" width="123" height="40" alt="Makita">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 3-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer3.png" width="146" height="44" alt="Логотип">
+            <img src="./img/content/producer3.png" width="146" height="44" alt="DeWalt">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 4-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer4.png" width="200" height="75" alt="Логотип">
+            <img src="./img/content/producer4.png" width="200" height="75" alt="Интерскол">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 5-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer5.png" width="169" height="31" alt="Логотип">
+            <img src="./img/content/producer5.png" width="169" height="31" alt="Hitachi">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 6-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer6.png" height="73" alt="Логотип">
+            <img src="./img/content/producer6.png" height="73" alt="LG">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 7-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer7.png" width="151" height="96" alt="Логотип">
+            <img src="./img/content/producer7.png" width="151" height="96" alt="AEG">
           </a>
         </li>
         <li class="popular-manufacturers-item">
           <!--Карточка 8-->
           <a class="popular-manufacturers-link" href="#">
-            <img src="./img/content/producer8.png" width="204" height="69" alt="Логотип">
+            <img src="./img/content/producer8.png" width="204" height="69" alt="Metabo">
           </a>
         </li>
       </ul>
@@ -325,7 +326,6 @@
           <input class="service-radio service-input-delivery visually-hidden" type="radio" id="delivery" name="service-radio" checked>
           <input class="service-radio service-input-guarantee visually-hidden" type="radio" id="guarantee" name="service-radio">
           <input class="service-radio  service-input-credit visually-hidden" type="radio" id="credit" name="service-radio">
-
           <ul class="services-list">
             <li class="services-list-item service-label-delivery">
               <label for="delivery" class=" service-label-delivery services-label">
@@ -455,18 +455,14 @@
         <!--соц сети-->
         <ul class="social-icons-list">
           <li class="social-icons-item">
-
-            <a class="social-icons-link social-icons-link-vk" href="https://vk.com">
-              <span class="visually-hidden">Вконтакте
-              </span>
-            </a>
+            <a class="social-icons-link social-icons-link-vk" href="https://vk.com" aria-label="Вконтакте"></a>
           </li>
-          <li>
-            <a class="social-icons-link social-icons-link-fb" href="https://facebook.com" aria-label="Facebook">
-            </a>
+          <li class="social-icons-item">
+            <a class="social-icons-link social-icons-link-fb" href="https://facebook.com" aria-label="Facebook"></a>
           </li>
-          <li>
-            <a class="social-icons-link social-icons-link-insta" href="" aria-label=" Instagram"></a></li>
+          <li class="social-icons-item">
+            <a class="social-icons-link social-icons-link-insta" href="#" aria-label="Instagram"></a>
+          </li>
         </ul>
       </div>
       <div class="last-footer-feedback-block">

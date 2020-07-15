@@ -10,6 +10,8 @@ let feedbackForm = document.querySelector('.feedback-form');
 let popupFeedback = document.querySelector('.popup-feedback');
 let closeButtons = document.querySelectorAll('.popup-close');
 let buttonsBuy = document.querySelectorAll('.popular-goods-button-buy');
+let sortingLabelDirection = document.querySelectorAll('.sorting-label-direction');
+let sortingLabel = document.querySelectorAll('.sorting-label');
 
 if (mapButton) {
   mapButton.addEventListener('click', function (e) {
@@ -47,3 +49,25 @@ if (feedbackForm) {
     }
   });
 };
+
+if (sortingLabel) {
+  sortingLabel.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      let sortingLabelActive = document.querySelector('.sorting-label-active');
+      sortingLabelActive.classList.remove('sorting-label-active');
+      this.classList.add('sorting-label-active');
+    });
+  });
+}
+
+if (sortingLabelDirection) {
+  sortingLabelDirection.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      let sortingLabelDirectionActive = document.querySelector('.sorting-label-direction-active');
+      sortingLabelDirectionActive.classList.remove('sorting-label-direction-active');
+      this.classList.add('sorting-label-direction-active');
+    });
+  });
+}
